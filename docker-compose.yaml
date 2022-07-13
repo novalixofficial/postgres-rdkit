@@ -20,3 +20,6 @@ services:
 
 volumes:
   pgdata:
+  
+- name: Build and push Docker images
+  uses: docker/build-push-action@v3.0.0
