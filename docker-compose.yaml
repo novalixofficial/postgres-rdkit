@@ -1,8 +1,9 @@
-version: "3.0"
 services:
 
   db:
-    image: vladkmrdnv/postgres-rdkit
+    build :
+      context: ./
+      dockerfile: Dockerfile
     restart: always
     ports:
     - 5432:5432
@@ -20,6 +21,3 @@ services:
 
 volumes:
   pgdata:
-  
-- name: Build and push Docker images
-  uses: docker/build-push-action@v3.0.0
